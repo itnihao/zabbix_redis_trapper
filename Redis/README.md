@@ -24,5 +24,6 @@ Template Redis
 
 
 ### 特别注意
-1.在发送给Server时采用的是zabbix_sender命令,其中-s 所要的是zabbix获取的名称,并不是IP就是对的。
-2.手动执行zabbix_get来确认是否真的生效的,特别是agnet是否重启。
+1.在发送给Server时采用的是zabbix_sender命令,其中-s 所要的是zabbix获取的名称,并不是IP就是对的。   
+2.手动执行zabbix_get来确认是否真的生效的,特别是agnet是否重启。    
+3.由于redis_data.sh中需要用到netstat这个命令需要修改2点,zabbix_agentd.conf增加UnsafeUserParameters=1,以及`chmod -s /bin/netstat`   
